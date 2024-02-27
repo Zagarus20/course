@@ -1,3 +1,6 @@
 C:\Users\maxim\Desktop\Laboratorna\course\Course\x64\Debug\Course.vcxproj.AssemblyReference.cache
 C:\Users\maxim\Desktop\Laboratorna\course\Course\x64\Debug\Course.MyForm.resources
 C:\Users\maxim\Desktop\Laboratorna\course\Course\x64\Debug\Course.vcxproj.GenerateResource.cache
+C:\Users\maxim\source\repos\Corsova\course\Course\x64\Debug\Course.vcxproj.AssemblyReference.cache
+C:\Users\maxim\source\repos\Corsova\course\Course\x64\Debug\Course.MyForm.resources
+C:\Users\maxim\source\repos\Corsova\course\Course\x64\Debug\Course.vcxproj.GenerateResource.cache

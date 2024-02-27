@@ -1,12 +1,9 @@
 #include "MyForm.h"
-using namespace System;
-using namespace System::Windows::Forms;
-
-[STAThreadAttribute]
-int main(array<String^>^ args)
+#include <Windows.h>
+using namespace Course; // Назва проєкта
+int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int)
 {
-	Application::SetCompatibleTextRenderingDefault(false);
 	Application::EnableVisualStyles();
-	Course::MyForm form;
-	Application::Run(% form);
-}
+	Application::SetCompatibleTextRenderingDefault(false);
+	Application::Run(gcnew MyForm);
+};

@@ -1,7 +1,6 @@
 #pragma once
-#include <fstream>
-using namespace std;
-
+#include <Windows.h>
+#include <string>
 namespace Course {
 
 	using namespace System;
@@ -10,7 +9,7 @@ namespace Course {
 	using namespace System::Windows::Forms;
 	using namespace System::Data;
 	using namespace System::Drawing;
-
+	using namespace std;
 	struct VideoCart
 	{
 		string Model;	//Модель
