@@ -1,4 +1,6 @@
 #pragma once
+#include <fstream>
+using namespace std;
 
 namespace Course {
 
@@ -9,6 +11,17 @@ namespace Course {
 	using namespace System::Data;
 	using namespace System::Drawing;
 
+	struct VideoCart
+	{
+		string Model;	//Модель
+		string Architecture;	//Архітектура
+		int CoreFrequensy;	//Частота ядра
+		int VideoMemyryFrequensy;	//Частота відео пам'яті
+		int NumberVideoMemyry;	//Кількість відео пам'яті
+		int MemoryBusSize;	//	Розрядніть шини пам'яті
+		int Energy;		
+
+	};
 	/// <summary>
 	/// Сводка для MyForm
 	/// </summary>
@@ -34,8 +47,10 @@ namespace Course {
 				delete components;
 			}
 		}
-	private: System::Windows::Forms::Button^ button1;
-	private: System::Windows::Forms::Button^ button2;
+	private: System::Windows::Forms::Button^ button_add;
+	protected:
+
+
 	protected:
 
 	private:
@@ -51,40 +66,32 @@ namespace Course {
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			this->button1 = (gcnew System::Windows::Forms::Button());
-			this->button2 = (gcnew System::Windows::Forms::Button());
+			this->button_add = (gcnew System::Windows::Forms::Button());
 			this->SuspendLayout();
 			// 
-			// button1
+			// button_add
 			// 
-			this->button1->Location = System::Drawing::Point(461, 89);
-			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(75, 23);
-			this->button1->TabIndex = 0;
-			this->button1->Text = L"button1";
-			this->button1->UseVisualStyleBackColor = true;
-			// 
-			// button2
-			// 
-			this->button2->Location = System::Drawing::Point(353, 88);
-			this->button2->Name = L"button2";
-			this->button2->Size = System::Drawing::Size(75, 23);
-			this->button2->TabIndex = 1;
-			this->button2->Text = L"button2";
-			this->button2->UseVisualStyleBackColor = true;
+			this->button_add->Location = System::Drawing::Point(429, 12);
+			this->button_add->Name = L"button_add";
+			this->button_add->Size = System::Drawing::Size(75, 23);
+			this->button_add->TabIndex = 0;
+			this->button_add->Text = L"Добавити";
+			this->button_add->UseVisualStyleBackColor = true;
+			this->button_add->Click += gcnew System::EventHandler(this, &MyForm::button_add_Click);
 			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(671, 261);
-			this->Controls->Add(this->button2);
-			this->Controls->Add(this->button1);
+			this->ClientSize = System::Drawing::Size(516, 369);
+			this->Controls->Add(this->button_add);
 			this->Name = L"MyForm";
 			this->Text = L"MyForm";
 			this->ResumeLayout(false);
 
 		}
 #pragma endregion
+	private: System::Void button_add_Click(System::Object^ sender, System::EventArgs^ e) {
+	}
 	};
 }
